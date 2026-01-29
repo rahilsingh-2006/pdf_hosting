@@ -1,0 +1,184 @@
+{
+  "name": "Chunking, embedding and inserting in the superbase",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e4a55203-be86-4fd3-be2e-1858820927a0",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/rahilsingh-2006/pdf_hosting/main/Gymshark%20FAQs.txt",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "abf66d23-baec-44a8-be40-d3c9a75a9b6a",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "const text = $json.data;\n\n// Windows + Unix newline safe regex\nconst regex = /Q:\\s*(.*?)\\r?\\nA:\\s*([\\s\\S]*?)(?=\\r?\\nQ:|$)/g;\n\nconst chunks = [];\nlet match;\n\nwhile ((match = regex.exec(text)) !== null) {\n  const question = match[1].trim();\n  const answer = match[2].trim();\n\n  chunks.push({\n    json: {\n      question,\n      answer,\n      content: `Q: ${question}\\nA: ${answer}`\n    }\n  });\n}\n\nreturn chunks;\n\n\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "196c25c0-ebb8-4f91-a839-fef379eb9d49",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent\n",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyBxGbpT4QWC7u0GrE8JVk7j1v14j-5UeKc"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Embedding",
+              "value": "Content-Type: application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"content\": {\n    \"parts\": [\n      {\n        \"text\": \"={{ $json.content }}\"\n      }\n    ]\n  }\n}\n\n\n\n",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 100
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        656,
+        0
+      ],
+      "id": "18bcea87-1e9f-4888-8216-4ab295ce02a0",
+      "name": "Gemini Embedding",
+      "executeOnce": false,
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "tableId": "documents",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "content",
+              "fieldValue": "={{ $node[\"Code in JavaScript\"].json.content }}\n"
+            },
+            {
+              "fieldId": "embedding",
+              "fieldValue": "={{ $json.embedding.values }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        880,
+        0
+      ],
+      "id": "63b24286-aae1-487f-9b80-36630859914a",
+      "name": "Create a row",
+      "credentials": {
+        "supabaseApi": {
+          "id": "wTnnbc6UmNSQpsUH",
+          "name": "Parth 1"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Gemini Embedding",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Embedding": {
+      "main": [
+        [
+          {
+            "node": "Create a row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "c4e7d307-a49f-4f5e-a013-a59c7bef2989",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e174b5e8abc3fbd8a49cd0ce55ff50daec66ad93c72751e7836a591e0e4953cd"
+  },
+  "id": "eEMcON5h7b7Q0UtDtcL75",
+  "tags": []
+}
