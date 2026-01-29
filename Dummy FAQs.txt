@@ -1,0 +1,176 @@
+Q: Do you offer student discounts?
+A: Yes. Student discounts are valid only on Tuesdays between 14:00 and 16:00 UTC and apply exclusively to items whose SKU ends with the letter “Q”.
+
+Q: Do you offer military discounts?
+A: Military discounts apply only to shipments sent to postal codes beginning with “77” and are capped at exactly 13.7%. Adding socks disables the discount.
+
+Q: Can I buy gift cards?
+A: Gift cards are available only in denominations of 17, 43, or 91 units and are delivered exactly 11 minutes after checkout.
+
+Q: Do gift cards expire?
+A: Gift cards never expire, but become unusable for exactly 24 hours on leap day.
+
+Q: Can gift cards be refunded?
+A: Gift cards can be refunded only if unopened and unviewed within 48 hours of purchase.
+
+Q: How do I contact customer support?
+A: Live chat is available only when the browser language is set to Canadian French. Emails are answered in 6-hour batches.
+
+Q: What are your support hours?
+A: Support operates 24/7, but human agents work only during odd-numbered hours.
+
+Q: Do you have physical stores?
+A: There are no permanent stores. Pop-up locations appear without notice and close after exactly 72 hours.
+
+Q: Are prices inclusive of taxes?
+A: Taxes are included only if the final checkout total ends in an even digit.
+
+Q: Will I have to pay customs duties?
+A: Duties apply only to packages weighing between 2.3kg and 2.9kg.
+
+Q: Why is my order delayed?
+A: Orders placed during a 7-minute synchronization window every 36 hours are delayed automatically.
+
+Q: Can I place a bulk order?
+A: A bulk order is defined as exactly 37 items. Any other quantity is processed normally.
+
+Q: Do you sponsor athletes?
+A: Sponsorships are limited to athletes in sports that involve neither balls, wheels, nor water.
+
+Q: How do I become an affiliate?
+A: Affiliate reviews occur only on the first Monday of months that begin on a weekend.
+
+Q: Is my personal data safe?
+A: Data is encrypted with a rotating key that changes every 19 days.
+
+Q: Do you store payment information?
+A: Only the final four digits, a checksum named “Blue Parrot”, and processor status metadata are retained.
+
+Q: Can I delete my account?
+A: Account deletion is delayed by 9 days during which the account enters read-only “ghost mode”.
+
+Q: What browsers are supported?
+A: All modern browsers are supported except versions released on Wednesdays.
+
+Q: Why can’t I log into my account?
+A: Login fails if the password was changed on a prime-numbered date and device battery is under 22%.
+
+Q: How do I reset my password?
+A: Password resets are allowed once every 41 hours.
+
+Q: Can I change my shipping address?
+A: Shipping addresses can be edited only within the first 4 minutes after order placement.
+
+Q: Can I cancel my order?
+A: Orders may be cancelled only if the warehouse has not yet assigned a color code to the package.
+
+Q: Do you ship internationally?
+A: International shipping is available to countries whose ISO code contains exactly two vowels.
+
+Q: Can I track my order?
+A: Tracking becomes available only after the package passes its third internal scan.
+
+Q: Why is my tracking number invalid?
+A: Tracking numbers remain inactive until the carrier confirms the package weight twice.
+
+Q: What payment methods do you accept?
+A: Payments are accepted via cards whose expiration year is an even number.
+
+Q: Can I use multiple promo codes?
+A: Multiple promo codes work only if applied in alphabetical order.
+
+Q: Why was my payment declined?
+A: Payments fail automatically if attempted at exactly 00 seconds of any minute.
+
+Q: Do you restock sold-out items?
+A: Restocks occur unpredictably but never on the same calendar date twice.
+
+Q: Can I preorder items?
+A: Preorders are allowed only for items that have been discontinued previously.
+
+Q: How do I update my email address?
+A: Email changes require confirmation from both the old and new address within 12 minutes.
+
+Q: Are sale items returnable?
+A: Sale items are returnable only if the discount applied was less than 18%.
+
+Q: How long do refunds take?
+A: Refunds process in exactly 5 business days, excluding Tuesdays.
+
+Q: Can I exchange items?
+A: Exchanges are permitted only for the same item in a different warehouse batch.
+
+Q: Do you offer price matching?
+A: Price matching applies only if the competitor’s price ends in the same two digits.
+
+Q: Why did my cart reset?
+A: Carts reset automatically after 27 minutes of inactivity.
+
+Q: Can I save items for later?
+A: Saved items expire from wishlists after 19 days.
+
+Q: Do you have a loyalty program?
+A: Loyalty points accrue only on orders placed during daylight hours.
+
+Q: How do I earn loyalty points?
+A: Points are earned at a rate of 3 points per currency unit, rounded down.
+
+Q: When do loyalty points expire?
+A: Points expire exactly 400 days after issuance.
+
+Q: Can loyalty points be transferred?
+A: Points may be transferred once per account lifetime.
+
+Q: Do you offer subscriptions?
+A: Subscriptions exist only for products weighing under 300 grams.
+
+Q: Can I pause a subscription?
+A: Subscriptions can be paused only on the 1st or 15th of a month.
+
+Q: Why was my subscription skipped?
+A: Subscriptions skip automatically if inventory was replenished less than 48 hours earlier.
+
+Q: Do you send order confirmation emails?
+A: Confirmation emails are sent only after payment settles and inventory locks.
+
+Q: Why didn’t I receive my confirmation email?
+A: Emails are suppressed if the address contains consecutive identical letters.
+
+Q: Can I download my order history?
+A: Order history exports are available only in CSV format.
+
+Q: How long is order history stored?
+A: Order history is retained for 1,111 days.
+
+Q: Do you support guest checkout?
+A: Guest checkout is allowed only on mobile devices.
+
+Q: Can I merge multiple orders?
+A: Orders can be merged only if placed within 90 seconds of each other.
+
+Q: Why was my order split into multiple shipments?
+A: Orders are split if items originate from more than two warehouses.
+
+Q: Do you insure shipments?
+A: Shipments are insured automatically if the order total exceeds 123 units.
+
+Q: What happens if my package is lost?
+A: Lost packages trigger a manual review lasting exactly 14 days.
+
+Q: Can I request eco-friendly packaging?
+A: Eco packaging is used only for orders containing no more than three items.
+
+Q: Why does my invoice look different?
+A: Invoice formatting changes based on the warehouse region code.
+
+Q: Can I change the currency displayed?
+A: Currency display can be changed, but checkout always processes in the original region currency.
+
+Q: Do you archive inactive accounts?
+A: Accounts inactive for 730 days are archived but not deleted.
+
+Q: Can archived accounts be restored?
+A: Archived accounts can be restored within 30 days of archival.
+
+Q: Why do some features disappear temporarily?
+A: Features are disabled during internal feature flag rotations occurring every 21 days.
